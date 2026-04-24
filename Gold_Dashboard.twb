@@ -1,0 +1,2227 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20261.26.0226.1626                               -->
+<workbook original-version='18.1' source-build='2026.1.0 (20261.26.0226.1626)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='Gold_Dashboard_17770531487250' path='/workbooks' revision='1.5' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Gold_prices_master' inline='true' name='federated.108g2mb03z62iu16eas3d1re95k7' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Gold_prices_master' name='textscan.0n62n9a17f4ogl13sfz831tsivxp'>
+            <connection class='textclean' cleaning='yes' compat='no' csvFile='C:/Users/User/Desktop/Private/Datasets/2. Gold Price Dynamics &amp; Market Behavior/Gold_prices_master.csv' dataRefreshTime='' directory='C:/Users/User/Desktop/Private/Datasets/2. Gold Price Dynamics &amp; Market Behavior' filename='C:/Users/User/AppData/Local/Temp/TableauTemp/063kxrj0s9hs101ajhqz81y9pnsc/Gold_prices_master.csv.xlsx' interpretationMode='8' password='' server='' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0n62n9a17f4ogl13sfz831tsivxp' name='Gold_prices_master.csv' table='[Gold_prices_master#csv$]' type='table'>
+          <columns character-set='UTF-8' gridOrigin='A1:Q1001:no:A1:Q1001:1' header='yes' locale='en_ZA' separator=','>
+            <column datatype='date' name='Date' ordinal='0' />
+            <column datatype='real' name='Close_Price' ordinal='1' />
+            <column datatype='real' name='High' ordinal='2' />
+            <column datatype='real' name='Low' ordinal='3' />
+            <column datatype='real' name='Open_Price' ordinal='4' />
+            <column datatype='integer' name='Volume' ordinal='5' />
+            <column datatype='integer' name='Adj_Close' ordinal='6' />
+            <column datatype='integer' name='Daily_Return' ordinal='7' />
+            <column datatype='integer' name='MA_20' ordinal='8' />
+            <column datatype='integer' name='MA_50' ordinal='9' />
+            <column datatype='integer' name='MA_200' ordinal='10' />
+            <column datatype='integer' name='Volatility_20' ordinal='11' />
+            <column datatype='integer' name='Year' ordinal='12' />
+            <column datatype='integer' name='Month' ordinal='13' />
+            <column datatype='integer' name='Day_of_Week' ordinal='14' />
+            <column datatype='integer' name='Quarter' ordinal='15' />
+            <column datatype='string' name='market_signal' ordinal='16' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[Gold_prices_master.csv]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Close_Price</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Close_Price]</local-name>
+            <parent-name>[Gold_prices_master.csv]</parent-name>
+            <remote-alias>Close_Price</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>High</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[High]</local-name>
+            <parent-name>[Gold_prices_master.csv]</parent-name>
+            <remote-alias>High</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Low</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Low]</local-name>
+            <parent-name>[Gold_prices_master.csv]</parent-name>
+            <remote-alias>Low</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Open_Price</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Open_Price]</local-name>
+            <parent-name>[Gold_prices_master.csv]</parent-name>
+            <remote-alias>Open_Price</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Volume</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Volume]</local-name>
+            <parent-name>[Gold_prices_master.csv]</parent-name>
+            <remote-alias>Volume</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Adj_Close</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Adj_Close]</local-name>
+            <parent-name>[Gold_prices_master.csv]</parent-name>
+            <remote-alias>Adj_Close</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Daily_Return</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Daily_Return]</local-name>
+            <parent-name>[Gold_prices_master.csv]</parent-name>
+            <remote-alias>Daily_Return</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MA_20</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[MA_20]</local-name>
+            <parent-name>[Gold_prices_master.csv]</parent-name>
+            <remote-alias>MA_20</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MA_50</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[MA_50]</local-name>
+            <parent-name>[Gold_prices_master.csv]</parent-name>
+            <remote-alias>MA_50</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MA_200</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[MA_200]</local-name>
+            <parent-name>[Gold_prices_master.csv]</parent-name>
+            <remote-alias>MA_200</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Volatility_20</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Volatility_20]</local-name>
+            <parent-name>[Gold_prices_master.csv]</parent-name>
+            <remote-alias>Volatility_20</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[Gold_prices_master.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Month</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Month]</local-name>
+            <parent-name>[Gold_prices_master.csv]</parent-name>
+            <remote-alias>Month</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Day_of_Week</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Day_of_Week]</local-name>
+            <parent-name>[Gold_prices_master.csv]</parent-name>
+            <remote-alias>Day_of_Week</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Quarter</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Quarter]</local-name>
+            <parent-name>[Gold_prices_master.csv]</parent-name>
+            <remote-alias>Quarter</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>market_signal</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[market_signal]</local-name>
+            <parent-name>[Gold_prices_master.csv]</parent-name>
+            <remote-alias>market_signal</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RZA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Gold_prices_master.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>4</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:Q1001:no:A1:Q1001:1&quot;</attribute>
+              <attribute datatype='integer' name='lost'>0</attribute>
+              <attribute datatype='integer' name='outcome'>1</attribute>
+              <attribute datatype='integer' name='processed'>16000</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Adj Close' datatype='integer' name='[Adj_Close]' role='measure' type='quantitative' />
+      <column caption='Close Price' datatype='real' name='[Close_Price]' role='measure' type='quantitative' />
+      <column caption='Daily Return' datatype='integer' name='[Daily_Return]' role='measure' type='quantitative' />
+      <column caption='Day of Week' datatype='integer' name='[Day_of_Week]' role='dimension' type='quantitative' />
+      <column caption='Ma 200' datatype='integer' name='[MA_200]' role='measure' type='quantitative' />
+      <column caption='Ma 20' datatype='integer' name='[MA_20]' role='measure' type='quantitative' />
+      <column caption='Ma 50' datatype='integer' name='[MA_50]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Month]' role='dimension' type='quantitative' />
+      <column caption='Open Price' datatype='real' name='[Open_Price]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Quarter]' role='dimension' type='quantitative' />
+      <column caption='Volatility 20' datatype='integer' name='[Volatility_20]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <column caption='Gold_prices_master.csv' datatype='table' name='[__tableau_internal_object_id__].[Gold_prices_master.csv_880B3104AA3C4A1DA046D8EBB1158609]' role='measure' type='quantitative' />
+      <column caption='Market Signal' datatype='string' name='[market_signal]' role='dimension' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_GB' class='hyper' dbname='C:/Users/User/AppData/Local/Temp/TableauTemp/#TableauTemp_1hdw4kc0v4b33y0zod4370r6co4r.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='04/24/2026 01:05:36 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Date</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Gold_prices_master.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1000</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Gold_prices_master.csv_880B3104AA3C4A1DA046D8EBB1158609]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Close_Price</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Close_Price]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Close_Price</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Gold_prices_master.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>81</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Gold_prices_master.csv_880B3104AA3C4A1DA046D8EBB1158609]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>High</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[High]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>High</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Gold_prices_master.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>81</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Gold_prices_master.csv_880B3104AA3C4A1DA046D8EBB1158609]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Low</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Low]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Low</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Gold_prices_master.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>79</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Gold_prices_master.csv_880B3104AA3C4A1DA046D8EBB1158609]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Open_Price</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Open_Price]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Open_Price</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Gold_prices_master.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>83</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Gold_prices_master.csv_880B3104AA3C4A1DA046D8EBB1158609]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Volume</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Volume]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Volume</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Gold_prices_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>995</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Gold_prices_master.csv_880B3104AA3C4A1DA046D8EBB1158609]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Adj_Close</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Adj_Close]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Adj_Close</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Gold_prices_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>81</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Gold_prices_master.csv_880B3104AA3C4A1DA046D8EBB1158609]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Daily_Return</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Daily_Return]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Daily_Return</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Gold_prices_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Gold_prices_master.csv_880B3104AA3C4A1DA046D8EBB1158609]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>MA_20</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[MA_20]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>MA_20</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Gold_prices_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>77</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Gold_prices_master.csv_880B3104AA3C4A1DA046D8EBB1158609]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>MA_50</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[MA_50]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>MA_50</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Gold_prices_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>72</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Gold_prices_master.csv_880B3104AA3C4A1DA046D8EBB1158609]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>MA_200</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[MA_200]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>MA_200</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Gold_prices_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>50</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Gold_prices_master.csv_880B3104AA3C4A1DA046D8EBB1158609]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Volatility_20</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Volatility_20]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Volatility_20</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Gold_prices_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Gold_prices_master.csv_880B3104AA3C4A1DA046D8EBB1158609]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Gold_prices_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Gold_prices_master.csv_880B3104AA3C4A1DA046D8EBB1158609]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Month</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Month]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Month</remote-alias>
+              <ordinal>13</ordinal>
+              <family>Gold_prices_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Gold_prices_master.csv_880B3104AA3C4A1DA046D8EBB1158609]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Day_of_Week</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Day_of_Week]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Day_of_Week</remote-alias>
+              <ordinal>14</ordinal>
+              <family>Gold_prices_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Gold_prices_master.csv_880B3104AA3C4A1DA046D8EBB1158609]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Quarter</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Quarter]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Quarter</remote-alias>
+              <ordinal>15</ordinal>
+              <family>Gold_prices_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Gold_prices_master.csv_880B3104AA3C4A1DA046D8EBB1158609]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>market_signal</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[market_signal]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>market_signal</remote-alias>
+              <ordinal>16</ordinal>
+              <family>Gold_prices_master.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RZA_S2' />
+              <object-id>[Gold_prices_master.csv_880B3104AA3C4A1DA046D8EBB1158609]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;South Africa&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Gold_prices_master.csv' id='Gold_prices_master.csv_880B3104AA3C4A1DA046D8EBB1158609'>
+            <properties context=''>
+              <relation connection='textscan.0n62n9a17f4ogl13sfz831tsivxp' name='Gold_prices_master.csv' table='[Gold_prices_master#csv$]' type='table'>
+                <columns character-set='UTF-8' gridOrigin='A1:Q1001:no:A1:Q1001:1' header='yes' locale='en_ZA' separator=','>
+                  <column datatype='date' name='Date' ordinal='0' />
+                  <column datatype='real' name='Close_Price' ordinal='1' />
+                  <column datatype='real' name='High' ordinal='2' />
+                  <column datatype='real' name='Low' ordinal='3' />
+                  <column datatype='real' name='Open_Price' ordinal='4' />
+                  <column datatype='integer' name='Volume' ordinal='5' />
+                  <column datatype='integer' name='Adj_Close' ordinal='6' />
+                  <column datatype='integer' name='Daily_Return' ordinal='7' />
+                  <column datatype='integer' name='MA_20' ordinal='8' />
+                  <column datatype='integer' name='MA_50' ordinal='9' />
+                  <column datatype='integer' name='MA_200' ordinal='10' />
+                  <column datatype='integer' name='Volatility_20' ordinal='11' />
+                  <column datatype='integer' name='Year' ordinal='12' />
+                  <column datatype='integer' name='Month' ordinal='13' />
+                  <column datatype='integer' name='Day_of_Week' ordinal='14' />
+                  <column datatype='integer' name='Quarter' ordinal='15' />
+                  <column datatype='string' name='market_signal' ordinal='16' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <shared-views>
+    <shared-view name='federated.108g2mb03z62iu16eas3d1re95k7'>
+      <datasources>
+        <datasource caption='Gold_prices_master' name='federated.108g2mb03z62iu16eas3d1re95k7' />
+      </datasources>
+      <datasource-dependencies datasource='federated.108g2mb03z62iu16eas3d1re95k7'>
+        <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+        <column caption='Market Signal' datatype='string' name='[market_signal]' role='dimension' type='nominal' />
+        <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+        <column-instance column='[market_signal]' derivation='None' name='[none:market_signal:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <filter class='quantitative' column='[federated.108g2mb03z62iu16eas3d1re95k7].[none:Date:qk]' included-values='in-range'>
+        <min>#2016-11-10#</min>
+        <max>#2020-10-30#</max>
+      </filter>
+      <filter class='categorical' column='[federated.108g2mb03z62iu16eas3d1re95k7].[none:market_signal:nk]'>
+        <groupfilter function='level-members' level='[none:market_signal:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+      </filter>
+    </shared-view>
+  </shared-views>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1_5B3273A7E42C4872B554519C1CE93836]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Gold Market Deep Div' type='sheet' worksheet='GOLD PRICE TREND' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Gold Market Deep Div' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action2_6393BDA3ED4B49A58BC10FE8C441416A]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Gold Market Deep Div' type='sheet' worksheet='MARKET SIGNAL DISTRIBUTION' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Gold Market Deep Div' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='AVERAGE PRICE'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Arial Black' fontsize='20'>AVERAGE PRICE</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Gold_prices_master' name='federated.108g2mb03z62iu16eas3d1re95k7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.108g2mb03z62iu16eas3d1re95k7'>
+            <column caption='Close Price' datatype='real' name='[Close_Price]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column-instance column='[Close_Price]' derivation='Avg' name='[avg:Close_Price:qk]' pivot='key' type='quantitative' />
+            <column caption='Market Signal' datatype='string' name='[market_signal]' role='dimension' type='nominal' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[market_signal]' derivation='None' name='[none:market_signal:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.108g2mb03z62iu16eas3d1re95k7].[none:Date:qk]</column>
+            <column>[federated.108g2mb03z62iu16eas3d1re95k7].[none:market_signal:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.108g2mb03z62iu16eas3d1re95k7].[avg:Close_Price:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#555555' fontname='Arial Black' fontsize='12'>AVERAGE PRICE</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#050da7' fontname='Arial Black' fontsize='28'><![CDATA[<[federated.108g2mb03z62iu16eas3d1re95k7].[avg:Close_Price:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{803BBC90-5558-4401-820E-634DA166D71B}' />
+    </worksheet>
+    <worksheet name='GOLD PRICE TREND'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Arial Black' fontsize='20'>GOLD PRICE TREND</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Gold_prices_master' name='federated.108g2mb03z62iu16eas3d1re95k7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.108g2mb03z62iu16eas3d1re95k7'>
+            <column caption='Close Price' datatype='real' name='[Close_Price]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column-instance column='[Close_Price]' derivation='Avg' name='[avg:Close_Price:qk]' pivot='key' type='quantitative' />
+            <column caption='Market Signal' datatype='string' name='[market_signal]' role='dimension' type='nominal' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[market_signal]' derivation='None' name='[none:market_signal:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Date]' derivation='Year' name='[yr:Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.108g2mb03z62iu16eas3d1re95k7].[none:Date:qk]</column>
+            <column>[federated.108g2mb03z62iu16eas3d1re95k7].[none:market_signal:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='font-size' field='[federated.108g2mb03z62iu16eas3d1re95k7].[yr:Date:ok]' value='11' />
+            <format attr='font-weight' field='[federated.108g2mb03z62iu16eas3d1re95k7].[yr:Date:ok]' value='normal' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#000000' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.108g2mb03z62iu16eas3d1re95k7].[avg:Close_Price:qk]</rows>
+        <cols>[federated.108g2mb03z62iu16eas3d1re95k7].[yr:Date:ok]</cols>
+      </table>
+      <simple-id uuid='{086152DC-EEAD-470D-82DC-093092BC0358}' />
+    </worksheet>
+    <worksheet name='MARKET SIGNAL DISTRIBUTION'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Arial Black' fontsize='20'>MARKET SIGNAL DISTRIBUTION</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Gold_prices_master' name='federated.108g2mb03z62iu16eas3d1re95k7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.108g2mb03z62iu16eas3d1re95k7'>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column-instance column='[market_signal]' derivation='Count' name='[cnt:market_signal:qk]' pivot='key' type='quantitative' />
+            <column caption='Market Signal' datatype='string' name='[market_signal]' role='dimension' type='nominal' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[market_signal]' derivation='None' name='[none:market_signal:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.108g2mb03z62iu16eas3d1re95k7].[none:Date:qk]</column>
+            <column>[federated.108g2mb03z62iu16eas3d1re95k7].[none:market_signal:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.108g2mb03z62iu16eas3d1re95k7].[none:market_signal:nk]' />
+              <wedge-size column='[federated.108g2mb03z62iu16eas3d1re95k7].[cnt:market_signal:qk]' />
+              <text column='[federated.108g2mb03z62iu16eas3d1re95k7].[none:market_signal:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.108g2mb03z62iu16eas3d1re95k7].[none:market_signal:nk]</rows>
+        <cols>[federated.108g2mb03z62iu16eas3d1re95k7].[none:market_signal:nk]</cols>
+      </table>
+      <simple-id uuid='{87BF7FA3-6CC9-46EF-AF42-FCEA42D030FC}' />
+    </worksheet>
+    <worksheet name='MAX PRICE'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Arial Black' fontsize='20'>MAX PRICE</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Gold_prices_master' name='federated.108g2mb03z62iu16eas3d1re95k7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.108g2mb03z62iu16eas3d1re95k7'>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[High]' role='measure' type='quantitative' />
+            <column caption='Market Signal' datatype='string' name='[market_signal]' role='dimension' type='nominal' />
+            <column-instance column='[High]' derivation='Max' name='[max:High:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[market_signal]' derivation='None' name='[none:market_signal:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.108g2mb03z62iu16eas3d1re95k7].[none:Date:qk]</column>
+            <column>[federated.108g2mb03z62iu16eas3d1re95k7].[none:market_signal:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.108g2mb03z62iu16eas3d1re95k7].[max:High:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#555555' fontname='Arial Black' fontsize='12'>MAX PRICE</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#050da7' fontname='Arial Black' fontsize='28'><![CDATA[<[federated.108g2mb03z62iu16eas3d1re95k7].[max:High:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{321041DF-2B51-4E27-9E88-E6CAEF6A32E4}' />
+    </worksheet>
+    <worksheet name='MIN PRICE'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='Arial Black' fontsize='20'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Gold_prices_master' name='federated.108g2mb03z62iu16eas3d1re95k7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.108g2mb03z62iu16eas3d1re95k7'>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Low]' role='measure' type='quantitative' />
+            <column caption='Market Signal' datatype='string' name='[market_signal]' role='dimension' type='nominal' />
+            <column-instance column='[Low]' derivation='Min' name='[min:Low:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[market_signal]' derivation='None' name='[none:market_signal:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.108g2mb03z62iu16eas3d1re95k7].[none:Date:qk]</column>
+            <column>[federated.108g2mb03z62iu16eas3d1re95k7].[none:market_signal:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.108g2mb03z62iu16eas3d1re95k7].[min:Low:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#666666' fontname='Arial Black' fontsize='12'>MIN PRICE</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#050da7' fontname='Arial Black' fontsize='28'><![CDATA[<[federated.108g2mb03z62iu16eas3d1re95k7].[min:Low:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{FDC12E94-3B85-4BF0-99BA-278CB380E844}' />
+    </worksheet>
+    <worksheet name='MONTHLY TREND'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Arial Black' fontsize='20'>MONTHLY TREND</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Gold_prices_master' name='federated.108g2mb03z62iu16eas3d1re95k7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.108g2mb03z62iu16eas3d1re95k7'>
+            <column caption='Close Price' datatype='real' name='[Close_Price]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column-instance column='[Close_Price]' derivation='Avg' name='[avg:Close_Price:qk]' pivot='key' type='quantitative' />
+            <column caption='Market Signal' datatype='string' name='[market_signal]' role='dimension' type='nominal' />
+            <column-instance column='[Date]' derivation='Month' name='[mn:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[market_signal]' derivation='None' name='[none:market_signal:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.108g2mb03z62iu16eas3d1re95k7].[none:Date:qk]</column>
+            <column>[federated.108g2mb03z62iu16eas3d1re95k7].[none:market_signal:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.108g2mb03z62iu16eas3d1re95k7].[avg:Close_Price:qk]</rows>
+        <cols>[federated.108g2mb03z62iu16eas3d1re95k7].[mn:Date:ok]</cols>
+      </table>
+      <simple-id uuid='{61E52F6F-36E8-434A-8213-AB10A3A0CAB2}' />
+    </worksheet>
+    <worksheet name='TOTAL VOLUME'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Arial Black'>TOTAL VOLUME</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Gold_prices_master' name='federated.108g2mb03z62iu16eas3d1re95k7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.108g2mb03z62iu16eas3d1re95k7'>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Volume]' role='measure' type='quantitative' />
+            <column caption='Market Signal' datatype='string' name='[market_signal]' role='dimension' type='nominal' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[market_signal]' derivation='None' name='[none:market_signal:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Volume]' derivation='Sum' name='[sum:Volume:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.108g2mb03z62iu16eas3d1re95k7].[none:Date:qk]</column>
+            <column>[federated.108g2mb03z62iu16eas3d1re95k7].[none:market_signal:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.108g2mb03z62iu16eas3d1re95k7].[sum:Volume:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#666666' fontname='Arial Black' fontsize='12'>TOTAL VOLUME</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#050da7' fontname='Arial Black' fontsize='28'><![CDATA[<[federated.108g2mb03z62iu16eas3d1re95k7].[sum:Volume:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{F39ED3D3-97DC-4E74-8C43-F08118CA7A68}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Gold Market Deep Div'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Arial Black' fontsize='28'>Gold Market Deep Dive</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#d4d4d4' />
+        </style-rule>
+      </style>
+      <size maxheight='4500' maxwidth='3000' sizing-mode='range' />
+      <datasources>
+        <datasource caption='Gold_prices_master' name='federated.108g2mb03z62iu16eas3d1re95k7' />
+      </datasources>
+      <datasource-dependencies datasource='federated.108g2mb03z62iu16eas3d1re95k7'>
+        <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+        <column caption='Market Signal' datatype='string' name='[market_signal]' role='dimension' type='nominal' />
+        <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+        <column-instance column='[market_signal]' derivation='None' name='[none:market_signal:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98352' id='5' param='vert' type-v2='layout-flow' w='99034' x='483' y='824'>
+            <zone fixed-size='89' h='9990' id='7' is-fixed='true' type-v2='title' w='99034' x='483' y='824'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='88362' id='8' param='vert' type-v2='layout-flow' w='99034' x='483' y='10814'>
+              <zone h='13285' id='12' type-v2='text' w='99034' x='483' y='10814'>
+                <formatted-text>
+                  <run fontalignment='1' fontcolor='#000000' fontname='Arial Black' fontsize='28'>Gold Market Deep Dive: Risk &amp; Trading Signals</run>
+                  <run fontalignment='1'>Æ&#10;&#10;</run>
+                  <run fontalignment='1' fontcolor='#000000' fontname='Arial Black' fontsize='14'>Analyze volatility patterns and signal distribution to identify high-probability trading conditions</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='75077' id='30' param='horz' type-v2='layout-flow' w='99034' x='483' y='24099' />
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='33265' id='15' param='vert' type-v2='layout-flow' w='59634' x='1832' y='39135'>
+          <zone h='33265' id='19' param='horz' type-v2='layout-flow' w='59634' x='1832' y='39135' />
+        </zone>
+        <zone h='33368' id='16' param='horz' type-v2='layout-flow' w='33291' x='63234' y='39135'>
+          <zone h='33368' id='18' type-v2='text' w='33291' x='63234' y='39135'>
+            <formatted-text>
+              <run fontcolor='#000000' fontname='Arial Black' fontsize='14'>Volatility highlights periods of uncertainty in the market. Spikes in volatility often precede or coincide with strong price movements, indicating higher risk but also greater opportunity.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+        </zone>
+        <zone h='32441' id='17' name='GOLD PRICE TREND' w='58841' x='1026' y='35942' />
+        <zone h='33265' id='22' param='horz' type-v2='layout-flow' w='46409' x='845' y='73841'>
+          <zone h='33265' id='27' name='MARKET SIGNAL DISTRIBUTION' w='46409' x='845' y='73841'>
+            <layout-cache fixed-size-h='630' fixed-size-w='583' type-h='fixed' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+        </zone>
+        <zone h='33265' id='26' param='horz' type-v2='layout-flow' w='50332' x='47677' y='74253'>
+          <zone forceUpdate='true' h='33265' id='29' type-v2='text' w='50332' x='47677' y='74253'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#000000' fontname='Arial Black' fontsize='12'>The distribution of signals shows that the market spends most of its time in consolidation (Hold), with fewer decisive Buy or Sell opportunities.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+        </zone>
+        <zone h='6694' id='33' name='GOLD PRICE TREND' param='[federated.108g2mb03z62iu16eas3d1re95k7].[none:Date:qk]' type-v2='filter' values='database' w='9656' x='71937' y='25850' />
+        <zone h='12358' id='34' name='GOLD PRICE TREND' param='[federated.108g2mb03z62iu16eas3d1re95k7].[none:market_signal:nk]' type-v2='filter' values='database' w='9656' x='83162' y='24923' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Arial Black' fontsize='28'>Gold Market Deep Dive</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='1000' minheight='1000' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='46' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98352' id='45' param='vert' type-v2='layout-flow' w='99034' x='483' y='824'>
+                <zone fixed-size='89' h='9990' id='7' type-v2='title' w='99034' x='483' y='824'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='13285' id='12' type-v2='text' w='99034' x='483' y='10814'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Arial Black' fontsize='28'>Gold Market Deep Dive: Risk &amp; Trading Signals</run>
+                    <run fontalignment='1'>Æ&#10;&#10;</run>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Arial Black' fontsize='14'>Analyze volatility patterns and signal distribution to identify high-probability trading conditions</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6694' id='33' name='GOLD PRICE TREND' param='[federated.108g2mb03z62iu16eas3d1re95k7].[none:Date:qk]' type-v2='filter' values='database' w='9656' x='71937' y='25850'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='12358' id='34' mode='checkdropdown' name='GOLD PRICE TREND' param='[federated.108g2mb03z62iu16eas3d1re95k7].[none:market_signal:nk]' type-v2='filter' values='database' w='9656' x='83162' y='24923'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='32441' id='17' is-fixed='true' name='GOLD PRICE TREND' w='58841' x='1026' y='35942'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='33368' id='18' type-v2='text' w='33291' x='63234' y='39135'>
+                  <formatted-text>
+                    <run fontcolor='#000000' fontname='Arial Black' fontsize='14'>Volatility highlights periods of uncertainty in the market. Spikes in volatility often precede or coincide with strong price movements, indicating higher risk but also greater opportunity.</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='33265' id='27' is-fixed='true' name='MARKET SIGNAL DISTRIBUTION' w='46409' x='845' y='73841'>
+                  <layout-cache fixed-size-h='630' fixed-size-w='583' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='33265' id='29' type-v2='text' w='50332' x='47677' y='74253'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Arial Black' fontsize='12'>The distribution of signals shows that the market spends most of its time in consolidation (Hold), with fewer decisive Buy or Sell opportunities.</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{9F13F092-94CE-408B-A7F2-7CB0BEC97981}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Gold Market Overview'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Tableau Bold' fontsize='28'>Gold Market Insights: Trends, Risk &amp; Opportunities</run>
+            <run fontalignment='1'>Æ&#10;&#10;</run>
+            <run fontalignment='1' fontcolor='#666666' fontname='Arial Black' fontsize='14'>Interactive analysis of gold price behavior, volatility patterns, and trading signals</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#d4d4d4' />
+        </style-rule>
+      </style>
+      <size maxheight='4500' maxwidth='3000' sizing-mode='range' />
+      <datasources>
+        <datasource caption='Gold_prices_master' name='federated.108g2mb03z62iu16eas3d1re95k7' />
+      </datasources>
+      <datasource-dependencies datasource='federated.108g2mb03z62iu16eas3d1re95k7'>
+        <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+        <column caption='Market Signal' datatype='string' name='[market_signal]' role='dimension' type='nominal' />
+        <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+        <column-instance column='[market_signal]' derivation='None' name='[none:market_signal:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98352' id='27' param='horz' type-v2='layout-flow' w='99034' x='483' y='824'>
+            <zone h='98352' id='5' param='vert' type-v2='layout-flow' w='99034' x='483' y='824'>
+              <zone fixed-size='151' h='16375' id='7' is-fixed='true' type-v2='title' w='99034' x='483' y='824'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='34604' id='8' param='horz' type-v2='layout-flow' w='23048' x='434' y='19464'>
+          <zone h='21936' id='13' name='AVERAGE PRICE' w='23048' x='434' y='19464'>
+            <layout-cache fixed-size-h='205' fixed-size-w='200' type-h='fixed' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+        </zone>
+        <zone h='5973' id='9' type-v2='text' w='98699' x='17472' y='42122'>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Arial Black' fontsize='12'>Gold prices show a sustained upward trend, reinforcing its role as a long-term store of value.</run>
+          </formatted-text>
+        </zone>
+        <zone h='25747' id='10' param='horz' type-v2='layout-flow' w='23792' x='24287' y='19567'>
+          <zone h='21936' id='14' name='MAX PRICE' w='23792' x='24287' y='19567'>
+            <layout-cache fixed-size-h='205' fixed-size-w='160' type-h='fixed' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+        </zone>
+        <zone h='22142' id='11' param='horz' type-v2='layout-flow' w='25836' x='49195' y='19670'>
+          <zone h='21936' id='15' name='MIN PRICE' w='25836' x='49195' y='19670'>
+            <layout-cache fixed-size-h='205' fixed-size-w='160' type-h='fixed' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+        </zone>
+        <zone h='21936' id='12' param='vert' type-v2='layout-flow' w='26270' x='75960' y='19670'>
+          <zone h='15963' id='16' name='TOTAL VOLUME' w='26270' x='75960' y='19670'>
+            <layout-cache fixed-size-h='147' fixed-size-w='380' type-h='fixed' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+        </zone>
+        <zone h='33265' id='17' param='horz' type-v2='layout-flow' w='96778' x='1983' y='51184'>
+          <zone h='33265' id='18' name='MONTHLY TREND' w='96778' x='1983' y='51184'>
+            <layout-cache cell-count-w='12' minheight='207' non-cell-size-w='68' type-h='scalable' type-w='cell' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+        </zone>
+        <zone h='8960' id='21' type-v2='text' w='33333' x='32714' y='85685'>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Arial Black' fontsize='12'>Certain months consistently show stronger performance, indicating seasonal demand patterns.</run>
+          </formatted-text>
+        </zone>
+        <zone h='5664' id='28' name='MONTHLY TREND' param='[federated.108g2mb03z62iu16eas3d1re95k7].[none:Date:qk]' type-v2='filter' values='database' w='10139' x='85094' y='86509' />
+        <zone fixed-size='109' h='13182' id='29' is-fixed='true' name='MONTHLY TREND' param='[federated.108g2mb03z62iu16eas3d1re95k7].[none:market_signal:nk]' type-v2='filter' values='database' w='10139' x='70489' y='87024' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run fontalignment='1' fontname='Tableau Bold' fontsize='28'>Gold Market Insights: Trends, Risk &amp; Opportunities</run>
+                <run fontalignment='1'>Æ&#10;&#10;</run>
+                <run fontalignment='1' fontcolor='#666666' fontname='Arial Black' fontsize='14'>Interactive analysis of gold price behavior, volatility patterns, and trading signals</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='1800' minheight='1800' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='41' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98352' id='40' param='vert' type-v2='layout-flow' w='99034' x='483' y='824'>
+                <zone fixed-size='151' h='16375' id='7' type-v2='title' w='99034' x='483' y='824'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='21936' id='13' is-fixed='true' name='AVERAGE PRICE' w='23048' x='434' y='19464'>
+                  <layout-cache fixed-size-h='205' fixed-size-w='200' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='21936' id='14' is-fixed='true' name='MAX PRICE' w='23792' x='24287' y='19567'>
+                  <layout-cache fixed-size-h='205' fixed-size-w='160' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='21936' id='15' is-fixed='true' name='MIN PRICE' w='25836' x='49195' y='19670'>
+                  <layout-cache fixed-size-h='205' fixed-size-w='160' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='15963' id='16' is-fixed='true' name='TOTAL VOLUME' w='26270' x='75960' y='19670'>
+                  <layout-cache fixed-size-h='147' fixed-size-w='380' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5973' id='9' type-v2='text' w='98699' x='17472' y='42122'>
+                  <formatted-text>
+                    <run fontcolor='#000000' fontname='Arial Black' fontsize='12'>Gold prices show a sustained upward trend, reinforcing its role as a long-term store of value.</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5664' id='28' name='MONTHLY TREND' param='[federated.108g2mb03z62iu16eas3d1re95k7].[none:Date:qk]' type-v2='filter' values='database' w='10139' x='85094' y='86509'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='109' h='13182' id='29' mode='checkdropdown' name='MONTHLY TREND' param='[federated.108g2mb03z62iu16eas3d1re95k7].[none:market_signal:nk]' type-v2='filter' values='database' w='10139' x='70489' y='87024'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='33265' id='18' is-fixed='true' name='MONTHLY TREND' w='96778' x='1983' y='51184'>
+                  <layout-cache cell-count-w='12' minheight='207' non-cell-size-w='68' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8960' id='21' type-v2='text' w='33333' x='32714' y='85685'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Arial Black' fontsize='12'>Certain months consistently show stronger performance, indicating seasonal demand patterns.</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{976A3496-DA02-4E84-8230-9085E46E0B81}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='dashboard' maximized='true' name='Gold Market Overview'>
+      <viewpoints>
+        <viewpoint name='AVERAGE PRICE' />
+        <viewpoint name='MAX PRICE' />
+        <viewpoint name='MIN PRICE' />
+        <viewpoint name='MONTHLY TREND'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='TOTAL VOLUME' />
+      </viewpoints>
+      <active id='5' />
+      <simple-id uuid='{450D4B7A-3284-462C-8C8F-688995351DF1}' />
+    </window>
+    <window class='dashboard' name='Gold Market Deep Div'>
+      <viewpoints>
+        <viewpoint name='GOLD PRICE TREND'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='MARKET SIGNAL DISTRIBUTION'>
+          <highlight field='[federated.108g2mb03z62iu16eas3d1re95k7].[none:market_signal:nk]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='30' />
+      <simple-id uuid='{AD7DB707-35AF-4F40-8E57-BB29FA4E9437}' />
+    </window>
+    <window class='worksheet' hidden='true' name='AVERAGE PRICE'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6DD40C99-06FA-4636-A115-72A4AEBD01E0}' />
+    </window>
+    <window class='worksheet' hidden='true' name='GOLD PRICE TREND'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.108g2mb03z62iu16eas3d1re95k7].[none:market_signal:nk]' type='filter' />
+            <card param='[federated.108g2mb03z62iu16eas3d1re95k7].[none:Date:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.108g2mb03z62iu16eas3d1re95k7].[none:Date:qk]</field>
+            <field>[federated.108g2mb03z62iu16eas3d1re95k7].[none:market_signal:nk]</field>
+            <field>[federated.108g2mb03z62iu16eas3d1re95k7].[yr:Date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{1EA8BE43-5CE6-4339-8F8A-8408A44D7B1A}' />
+    </window>
+    <window class='worksheet' hidden='true' name='MARKET SIGNAL DISTRIBUTION'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.108g2mb03z62iu16eas3d1re95k7].[none:market_signal:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.108g2mb03z62iu16eas3d1re95k7].[none:market_signal:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{39B57313-2464-4E0A-8CFF-7605DAA5A793}' />
+    </window>
+    <window class='worksheet' hidden='true' name='MAX PRICE'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7BBAEDD4-423E-40B8-B3EE-2B720D145EF4}' />
+    </window>
+    <window class='worksheet' hidden='true' name='MIN PRICE'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{DCDE61B1-2290-47CE-80A2-331488EDFF03}' />
+    </window>
+    <window class='worksheet' hidden='true' name='MONTHLY TREND'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.108g2mb03z62iu16eas3d1re95k7].[yr:Date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{CF14F76C-5992-45C6-8F75-DF4FA4297DD2}' />
+    </window>
+    <window class='worksheet' hidden='true' name='TOTAL VOLUME'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{0DC91762-6099-4A77-8DCF-C38B39858391}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Gold Market Deep Div' width='192'>
+      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
+      Yo67HQAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Gold Market Overview' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
