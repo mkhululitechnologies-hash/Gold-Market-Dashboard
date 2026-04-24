@@ -19,9 +19,5 @@ This project presents an interactive analysis of gold price trends, volatility, 
 
 [View Dashboard](](https://public.tableau.com/app/profile/mkhulu.mokutu/viz/Gold_Dashboard_17770531487250/GoldMarketDeepDiv?publish=yes)E)
 
-## 📌 Interactive Version
 
-<!-- Tableau Embed -->
-
-PASTE_IFRAME_CODE_HERE
 
